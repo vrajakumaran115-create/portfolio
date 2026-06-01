@@ -22,7 +22,7 @@ import {
   Heart,
 } from 'lucide-react';
 
-const profileImage = 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400';
+const profileImage = '/photo.png';
 
 const typingTexts = [
   'Aspiring Software Developer',
@@ -156,16 +156,16 @@ function App() {
       description: 'Agriculture business platform designed to support farmers and local product management through digital technology solutions.',
       tags: ['Web App', 'Agriculture', 'E-commerce'],
       icon: Globe,
-      github: '#',
-      demo: '#',
+      github: 'https://github.com/vrajakumaran115-create/agrimart',
+      demo: 'https://www.linkedin.com/feed/update/urn:li:activity:7466150152538329089/',
     },
     {
       title: 'MoiPay',
       description: 'Fintech-based payment solution concept focused on secure digital transactions and simplified payment systems.',
       tags: ['Fintech', 'Payments', 'Security'],
       icon: Database,
-      github: '#',
-      demo:'https://www.linkedin.com/feed/update/urn:li:activity:7434203701629616128/',
+      github: 'https://github.com/vrajakumaran115-create/Moipay',
+      demo: 'https://www.linkedin.com/feed/update/urn:li:activity:7434203701629616128/',
     },
     {
       title: 'WorkLink',
@@ -253,7 +253,7 @@ function App() {
         className="min-h-screen flex items-center justify-center pt-16 px-4"
       >
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 animate-float">
+          <div className="mt-12 mb-8 animate-float">
             <div className="relative inline-block">
               <img
                 src={profileImage}
@@ -493,14 +493,24 @@ function App() {
                 </div>
 
                 <div className="flex gap-3">
-                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-colors">
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-slate-800 text-white rounded-lg hover:bg-slate-700 transition-colors"
+                  >
                     <Github className="w-4 h-4" />
                     GitHub
-                  </button>
-                  <button className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all">
+                  </a>
+                  <a
+                    href={project.demo}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg hover:shadow-lg hover:shadow-blue-500/25 transition-all"
+                  >
                     <ExternalLink className="w-4 h-4" />
                     Demo
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
